@@ -1,0 +1,33 @@
+ros2 run plotjuggler plotjuggler
+rqt_plot
+
+
+
+altkamul@altkamul-HP-250-G7-Notebook-PC:~$ rqt_plot
+rqt_plot: command not found
+
+sudo apt install -y ros-jazzy-rqt-plot
+
+sudo apt install ros-jazzy-foxglove-bridge
+ros2 launch foxglove_bridge foxglove_bridge_launch.xml
+ws://localhost:8765
+
+
+altkamul@altkamul-HP-250-G7-Notebook-PC:~$ ros2 launch foxglove_bridge foxglove_bridge_launch.xml
+[INFO] [launch]: All log files can be found below /home/altkamul/.ros/log/2025-12-20-14-27-41-901124-altkamul-HP-250-G7-Notebook-PC-21304
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [foxglove_bridge-1]: process started with pid [21307]
+[foxglove_bridge-1] [WARN] [1766226462.405571342] [rcl]: ROS_LOCALHOST_ONLY is deprecated but still honored if it is enabled. Use ROS_AUTOMATIC_DISCOVERY_RANGE and ROS_STATIC_PEERS instead.
+[foxglove_bridge-1] [WARN] [1766226462.405594934] [rcl]: 'localhost_only' is disabled, 'automatic_discovery_range' and 'static_peers' will be used.
+[foxglove_bridge-1] [INFO] [1766226462.777294561] [foxglove_bridge]: Starting foxglove_bridge (jazzy, 3.2.2@)
+[foxglove_bridge-1] [INFO] [1766226462.780368223] [foxglove_bridge]: Server listening on port 8765
+[foxglove_bridge-1] [INFO] [1766226462.797501710] [foxglove_bridge]: Advertising new channel 1 for topic "/tf"
+[foxglove_bridge-1] [INFO] [1766226462.800563400] [foxglove_bridge]: Advertising new channel 2 for topic "/rosout"
+[foxglove_bridge-1] [INFO] [1766226462.801916045] [foxglove_bridge]: Advertising new channel 3 for topic "/parameter_events"
+[foxglove_bridge-1] [INFO] [1766226462.801971907] [foxglove_bridge]: Advertising new channel 4 for topic "/tf_static"
+[foxglove_bridge-1] [INFO] [1766226462.803372808] [foxglove_bridge]: Advertising new channel 5 for topic "/imu/pose"
+[foxglove_bridge-1] [INFO] [1766226462.808430801] [foxglove_bridge]: Advertising new channel 6 for topic "/imu/filtered"
+[foxglove_bridge-1] [INFO] [1766226462.808502491] [foxglove_bridge]: Advertising new channel 7 for topic "/imu"
+Fontconfig error: Cannot load default config file: No such file: (null)
+
+ros2 launch foxglove_bridge foxglove_bridge_launch.xml port:=8765 address:=0.0.0.0
